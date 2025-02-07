@@ -13,3 +13,4 @@ isBSTHelper (Node val left right) minB maxB =
 withinBounds :: (Ord a) => a -> Maybe a -> Maybe a -> Bool
 withinBounds val minB maxB =
   maybe True (val >) minB && maybe True (val <) maxB
+
