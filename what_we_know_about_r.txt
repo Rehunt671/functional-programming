@@ -1,0 +1,4 @@
+For arrowJoin :: (r -> r -> a) -> r -> a, 
+  r ต้องเป็น type ที่สามารถใช้เป็น input สำหรับทั้ง 2 argument ของ function (r -> r -> a).
+For pairJoin :: (r, (r, a)) -> (r, a), 
+  r ไม่มี contraint อะไรเลยเนื่องจากไม่ได้ใช้ในการคำนวณ parjoin แค่เอา inner r ออก ให้เหลือแต่ outer r กับ a ไว้
