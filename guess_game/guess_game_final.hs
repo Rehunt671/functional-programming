@@ -16,7 +16,7 @@ gameLoop :: Int -> Int -> [Int] -> IO ()
 gameLoop secret remainingGuesses guesses
     | remainingGuesses <= 0 = do
         putStrLn "Out of guesses! Game over."
-        putStrLn $ "Guesses made: " ++ show guesses  -- Fix here: Use `show guesses` to convert to string
+        putStrLn $ "Guesses made: " ++ show guesses
     | otherwise = do
         putStrLn $ "You have " ++ show remainingGuesses ++ " guesses left."
         putStrLn "Enter your guess: "
@@ -27,7 +27,7 @@ gameLoop secret remainingGuesses guesses
         if result == "Correct!"
             then do
                 putStrLn "Congratulations, you guessed the number!"
-                putStrLn $ "Guesses made: " ++ show updatedGuesses  -- Fix here: Use `show updatedGuesses`
+                putStrLn $ "Guesses made: " ++ show updatedGuesses
             else gameLoop secret (remainingGuesses - 1) updatedGuesses
 
 -- Impure function: Gets the secret number and max attempts, then starts the game
